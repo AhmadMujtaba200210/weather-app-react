@@ -58,9 +58,9 @@
 }
 
 .daily-details-grid-item label:first-child {
-  color: #757575;
+  color: #f5f5f5;
 }
 
 .daily-details-grid-item label:last-child {
-  color: #212121;
+  color: #f5f5f5;
 }

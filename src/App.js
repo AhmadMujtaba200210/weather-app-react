@@ -14,6 +14,7 @@ function App() {
   const handleOnSearchChange = (searchData) => {
     const [lat, lon] = searchData.value.split(" ");
 
+    // openWeatherApi
     const currentWeatherFetch = fetch(
       `${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
     );
@@ -34,10 +35,11 @@ function App() {
 
   return (
     <div className="container">
-      <Search onSearchChange={handleOnSearchChange} />
-      {currentWeather && <CurrentWeather data={currentWeather} />}
-      {forecast && <Forecast data={forecast} />}
+      <Search onSearchChange={handleOnSearchChange} /> {/* Search Bar component*/}
+      {currentWeather && <CurrentWeather data={currentWeather} />} {/* CurrentWeather component*/}
+      {forecast && <Forecast data={forecast} />} {/* forecast data component*/}
     </div>
+    
   );
 }
 

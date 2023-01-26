@@ -1,11 +1,15 @@
 import React from "react";
 import "./current-weather.css";
-
+// this component getting data from weather api in form of props from index.js file
 const CurrentWeather = ({ data }) => {
   return (
     <div className="weather">
       <div className="top">
         <div>
+          {/* it will recieve an array of data from index.js as props and then 
+            for todays weather we will say data.weather[0].description as current weather will 
+            always present in the start of array and future weather will be present in the rest of array
+          */}
           <p className="city">{data.city}</p>
           <p className="weather-description">{data.weather[0].description}</p>
         </div>
